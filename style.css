@@ -1,0 +1,13 @@
+/*
+Theme Name: Kara_Plak
+Theme URI: http://underscores.me/
+Author: Koray Löker
+Author URI: http://karaplak.com
+Description: Kara Plak sayfası
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: kara_plak
+Tags: bootstrap, commentless, mobile-first
+*/
+@import "css/bootstrap.min.css";
