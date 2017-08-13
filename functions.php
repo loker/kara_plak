@@ -20,7 +20,8 @@ function kara_plak_scripts() {
 	wp_enqueue_style( 'kara_plak-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'kara_plak-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'kara_plak-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'popper', get_template_directory_uri() . '/js/popper.min.js', array(), '1.1', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4beta1', true );
 }
 add_action( 'wp_enqueue_scripts', 'kara_plak_scripts' );
 
