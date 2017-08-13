@@ -19,6 +19,6 @@ If you need the very same thing, it'll save you an hour maybe? That's all...
 * Initial release
 == Credits ==
 * Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com), Copyright 2011-2017 The Bootstrap Authors. Copyright 2011-2017 Twitter, Inc.
+* Bootstrap v4.0.0-beta (https://getbootstrap.com), Copyright 2011-2017 The Bootstrap Authors. Copyright 2011-2017 Twitter, Inc.
 * Koray Löker
 * WP Bootstrap Navwalker, https://github.com/wp-bootstrap/wp-bootstrap-navwalker, Edward McIntyre
