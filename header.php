@@ -9,47 +9,30 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="container">
 	<a class="sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'kara_plak' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-		<nav id="site-navigation" class="navbar navbar-inverse bg-inverse navbar-toggleable-md" role="navigation">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		      <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse" data-target="#oldschool_menu" aria-controls="oldschool_menu" aria-expanded="false" aria-label="Toggle navigation">
-		        <span class="navbar-toggler-icon"></span>
-		      </button>
-		      <a class="navbar-brand" href="<?php echo home_url(); ?>">
-		                <?php bloginfo('name'); ?>
-		            </a>
-		        <?php
-		            wp_nav_menu( array(
-		                'menu'              => 'primary',
-		                'theme_location'    => 'primary',
-		                'depth'             => 2,
-		                'container'         => 'div',
-		                'container_class'   => 'collapse navbar-collapse',
-		                'container_id'      => 'oldschool_menu',
-		                'menu_class'        => 'navbar-nav',
-		                'walker'            => new WP_Bootstrap_Navwalker())
-		            );
-		        ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content" tabindex="-1">
+	<div class="row">
+		<div class="col-lg-2">
+			<div class="site-branding">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="image-responsive">
+					<img alt="kara plak yayınları logo" src="<?php echo esc_url( home_url( '/wp-content/themes/kara_plak/img/logo.png' ) ); ?>">
+		      <!-- <img alt="kara plak yayınları logo" class="small-logo hidden-md hidden-lg" src="<?php echo esc_url( home_url( '/wp-content/themes/kara_plak/img/logo-yatay.png' ) ); ?>">-->
+				</a>
+			</div><!-- .site-branding -->
+			<header id="masthead" class="site-header">
+				<nav id="site-navigation" class="nav flex-column" role="navigation">
+					<?php
+							wp_nav_menu( array(
+									'menu'              => 'ana-menu',
+									'theme_location'    => 'primary',
+									'depth'             => 2,
+									'menu_class'        => 'nav',
+									'fallback_cb'       => 'wp_page_menu',
+									'walker'            => new WP_Bootstrap_Navwalker())
+							);
+					?>
+				</nav><!-- #site-navigation -->
+				</header><!-- #masthead -->
+			</div>
+			<div class="col-lg-10">
+				<div id="content" class="site-content">
